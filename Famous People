@@ -1,0 +1,47 @@
+In this project, you’re going to make your own table with some small set of “famous people”, then make more tables about things they do and join those to create nice human readable lists.
+
+
+
+/* Create table about the people and what they do here */
+CREATE TABLE famous_people(
+id INTEGER PRIMARY KEY AUTOINCREMENT,
+name TEXT,
+industry TEXT); 
+
+INSERT INTO famous_people(name,industry)
+VALUES ("Alicia Keys","Music");  
+INSERT INTO famous_people(name,industry)
+VALUES ("Beyonce","Music");
+INSERT INTO famous_people(name,industry)
+VALUES ("Jay Z", "Music"); 
+INSERT INTO famous_people(name,industry)
+VALUES ("Drake","Music"); 
+INSERT INTO famous_people(name,industry)
+VALUES ("Rihanna","Music"); 
+INSERT INTO famous_people (name, industry)
+VALUES ("Swizz Beats","Music");
+
+
+CREATE TABLE popular_songs (
+id INTEGER PRIMARY KEY AUTOINCREMENT, song_name TEXT,
+artist TEXT); 
+
+INSERT INTO popular_songs(song_name, artist) VALUES ("If I Aint Got You","Alicia Keys");
+INSERT INTO popular_songs(song_name, artist)
+VALUES ("Nice For What", "Drake");
+INSERT INTO popular_songs(song_name, artist)
+VALUES ("Upgrade You", "Beyonce");
+INSERT INTO popular_songs(song_name, artist)
+VALUES ("Umbrella", "Rihanna");
+INSERT INTO popular_songs(song_name, artist)
+VALUES ("Song Cry", "Jay Z"); 
+
+
+
+SELECT famous_people.name,popular_songs.song_name 
+FROM famous_people 
+LEFT OUTER JOIN popular_songs 
+ON famous_people.name = popular_songs.artist; 
+
+
+
