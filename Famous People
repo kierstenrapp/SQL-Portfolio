@@ -37,6 +37,9 @@ INSERT INTO popular_songs(song_name, artist)
 VALUES ("Song Cry", "Jay Z"); 
 
 
+# Analysis 
+
+# Which famous person performed which popular song? 
 
 SELECT famous_people.name,popular_songs.song_name 
 FROM famous_people 
