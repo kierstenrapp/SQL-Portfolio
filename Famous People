@@ -26,7 +26,8 @@ CREATE TABLE popular_songs (
 id INTEGER PRIMARY KEY AUTOINCREMENT, song_name TEXT,
 artist TEXT); 
 
-INSERT INTO popular_songs(song_name, artist) VALUES ("If I Aint Got You","Alicia Keys");
+INSERT INTO popular_songs(song_name, artist) 
+VALUES ("If I Aint Got You","Alicia Keys");
 INSERT INTO popular_songs(song_name, artist)
 VALUES ("Nice For What", "Drake");
 INSERT INTO popular_songs(song_name, artist)
